@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./lib/jquery.js"></script>
+  <!-- 1、导入template模板引擎,在window全局，有一个template('模板的id', 数据对象)函数 -->
+  <script src="./lib/template-web.js"></script>
+</head>
+
+<body>
+  <div class="container"></div>
+  <!-- 3、定义模板,必须定义在script便签html类型的便签里 -->
+  <script type="text/html" id="message">
+  <!-- <h4>我叫{{name}},我今年{{age}}岁了。</h4> -->
+  <h4>{{if number==1}} 我有话和你讲 {{else if age}} 我今年{{age}}岁了 {{/if}}</h4>
+  </script>
+  <script>
+    // 2、定义数据
+    var data = { name: '王占静', age: 23, number: 2 }
+    // 4、调用template函数
+    var tem = template('message', data)
+    console.log(tem);
+    // 5、渲染html
+    $(function () {
+      $('.container').html(tem)
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./lib/myAjax.js"></script>
+</head>
+
+<body>
+  <script>
+    // // 1、创建一个xhr对象
+    // var xhr = new XMLHttpRequest()
+    // // 2、调用xhr的open属性
+    // xhr.open('POST', 'http://www.liulongbin.top:3006/api/addbook')
+    // // 3、设置Content-Type属性，固定写法
+    // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    // // 4、调用xhr的send函数并传递参数
+    // var fd = new FormData()
+    // // xhr.send('bookname=水浒传&author=施耐庵&publisher=天津')
+    // // 5、监听onreadystatechange事件
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === 4 && xhr.status === 200) {
+    //     // 6、打印返回数据
+    //     var res = JSON.parse(xhr.responseText)
+    //     console.log(res);
+    //   }
+    // }
+    // myAjax({
+    //   method: 'get',
+    //   url: 'http://www.liulongbin.top:3006/api/getbooks',
+    //   data: {
+    //     id: 1
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+    //   }
+
+    // })
+    // myAjax({
+    //   method: 'post',
+    //   url: 'http://www.liulongbin.top:3006/api/addbook',
+    //   data: {
+    //     bookname: '我的图书',
+    //     author: 'wwww',
+    //     publisher: '北京'
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+    //   }
+
+    // })
+    var fd = new FormData()
+    fd.append('name', 'wzj ')
+    console.log(fd);
+  </script>
+</body>
+
+</html>
